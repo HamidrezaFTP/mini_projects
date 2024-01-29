@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: radial-gradient(#2c2c2c, #030303);
+    display: grid;
+    place-items: center;
+}
+
+h1 {
+    position: relative;
+    font-family: sans-serif;
+    color: orangered;
+    font-size: 60px;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    color: white;
+    z-index: -1;
+    transition: 0.2s;
+}
+
+h1:hover::before {
+    top: 0.04em;
+    left: 0.04em;
+}
+
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    color: #ec22251a;
+    top: 0em;
+    left: 0em;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 1px #ed0e0e;
+    transition: 0.2s;
+}
+
+h1:hover::after {
+    top: -0.04em;
+    left: -0,04em;
+}
