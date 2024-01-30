@@ -1,0 +1,40 @@
+* {
+  overflow: hidden;
+  margin: 0;
+}
+
+body {
+  background: #000;
+}
+
+.circle {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  border: 20px solid rgb(128, 43, 255);
+  border-radius: 50%;
+  position: absolute;
+  top: 25%;
+  left: 37%;
+}
+
+.one {
+  animation: circle 4s infinite linear;
+}
+
+.two {
+  animation: circle 3s infinite linear;
+}
+
+.three {
+  animation: circle 2s infinite linear;
+}
+
+@keyframes circle {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(6);
+  }
+}
