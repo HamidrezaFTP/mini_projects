@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #07b2f5;
+}
+
+.Cube {
+    height: 200px;
+    width: 200px;
+    background-color: #2c2c2c;
+    border-radius: 50%;
+    filter: blur(20px);
+    transition-duration: 0.25s;
+}
+
+.Cube:hover {
+    filter: blur(0px);
+    transition: filter 1s, border-radius 3s 1s;
+    border-radius: 30px;
+}

@@ -1,0 +1,15 @@
+body {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+div {
+    width: 45vh;
+    height: 45vh;
+    background: linear-gradient(black, black) padding-box, linear-gradient(to right, blue, red) border-box;
+    border: 2vw solid transparent;
+    border-radius: 50%;
+}
