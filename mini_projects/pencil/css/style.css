@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 25vh;
+}
+
+.pencil {
+    height: 40px;
+    background-image: linear-gradient(#f19d00 20%, #c77003 20% 80%, #9e5501 80%);
+    position: relative;
+}
+
+.pencil--long {
+    width: 50%;
+}
+
+.pencil::before, .pencil::after {
+    position: absolute;
+    height: 100%;
+    width: 64px;
+}
+
+.pencil::before {
+    content: '';
+    left: -32px;
+    background-image: linear-gradient(to right, #ff0032 25%, #c80032 25% 50%, #0a0a0a 50% 55%, #141414 55% 60%, #0a0a0a 60% 65%, #141414 65% 70%, #0a0a0a 70% 75%, #141414 75% 80%, #0a0a0a 80% 85%, #141414 85% 90%, #0a0a0a 90% 95%, #141414 95%);
+    border-radius: 10px 0 0 10px;
+}
+
+.pencil::after {
+    content: '';
+    right: -64px;
+    background-image: linear-gradient(to right, #ff8c46, #ff9650 42%, #000 0);
+    clip-path: polygon(0% 0%, 0% 100%, 60% 50%);
+}
