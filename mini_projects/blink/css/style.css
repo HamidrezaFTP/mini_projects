@@ -1,0 +1,56 @@
+body {
+    background-color: #459bf9;
+}
+
+.server, .server .disk {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.server {
+    width: 20%;
+    height: 10%;
+    background-color: #054fa0;
+    border-radius: 5px;
+}
+
+.server:after {
+    right: 5%;
+    animation: blink 0.5s infinite steps(2, end);
+}
+
+.server:before {
+    left: 5%;
+    animation: blink 1s infinite steps(2, end);
+}
+
+.server .disk {
+    width: 40%;
+    height: 20%;
+    background-color: #04376e;
+    border-radius: 10%;
+}
+
+.server:after, .server:before {
+    content: '';
+    width: 15%;
+    height: 40%;
+    margin: auto 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+}
+
+@keyframes blink {
+    from {
+        background-color: red;
+    }
+    to {
+        background-color: #000;
+    }
+}
