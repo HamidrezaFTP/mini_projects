@@ -1,0 +1,57 @@
+.blub {
+    margin: 80px auto;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.blub-1, .blub-2, .blub-3 {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+    transform: scale(.8);
+    animation: blub 1.5s ease-in-out infinite;
+}
+
+.blub-1 {
+    background: #7d69db;
+    width: 150px;
+    height: 150px;
+}
+
+.blub-2 {
+    top: calc(15px);
+    left: calc(15px);
+    width: calc(120px);
+    height: calc(120px);
+    background: #4f34ce;
+    animation-delay: 0.2s;
+}
+
+.blub-3 {
+    top: calc(30px);
+    left: calc(30px);
+    width: calc(90px);
+    height: calc(90px);
+    background: #432bb3;
+    animation-delay: 0.4s;
+}
+
+@keyframes blub {
+    0% {
+        opacity: 0.5;
+        transform: scale(.8);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(.8);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    }
+}
