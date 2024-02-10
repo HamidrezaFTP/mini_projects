@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.pin {
+    width: 100px;
+    height: 100px;
+    background-color: #a55eea;
+    border-radius: 60px 60px 0px 60px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.pin::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background: #222;
+    position: absolute;
+    left: 26%;
+    top: 26%;
+    border-radius: 60px;
+}
