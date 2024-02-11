@@ -1,0 +1,42 @@
+body {
+    font-family: helvetica;
+    font-size: 18px;
+    text-align: center;
+}
+
+.accordion {
+    display: inline-block;
+    text-align: left;
+    margin: 1%;
+    width: 70%;
+}
+
+.accordion:hover .accordion-content {
+    max-height: 300px;
+}
+
+.accordion-content {
+    background: #e5feff;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.accordion-inner {
+    padding: 0 15px;
+}
+
+.accordion-toggle {
+    background: #00b8c9;
+    border-radius: 3px;
+    color: #fff;
+    display: block;
+    font-size: 30px;
+    margin: 0 0 10px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.accordion-toggle:hover {
+    background: #00727d;
+}
