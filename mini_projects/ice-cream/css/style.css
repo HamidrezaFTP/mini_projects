@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.icecream {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.ice {
+    background-color: #FF729F;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    position: relative;
+}
+
+.ice::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    height: 30px;
+    background: #FF729F;
+    width: 100px;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.cone {
+    margin-top: -20px;
+    height: 0px;
+    width: 0px;
+    border-right: 45px solid transparent;
+    border-left: 45px solid transparent;
+    border-top: 140px solid #fac559;
+    z-index: 1;
+}
