@@ -1,0 +1,18 @@
+body {
+    height: 100vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #333333;
+}
+
+.text {
+    text-transform: uppercase;
+    background: linear-gradient(to right, #ffe100 0%, #ff0800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 55px;
+    font-family: sans-serif;
+}

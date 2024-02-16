@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #00E7FF;
+    background: linear-gradient(45deg, #00E7FF, #00FF9C);
+}
+
+.send {
+    font-size: 50px;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.5em;
+    margin-top: -0.5em;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    color: white;
+
+    &:focus {
+        outline: none;
+        animation: fly 1000ms ease;
+    }
+}
+
+@keyframes fly {
+    10% {
+        transform: translate(-10px, 10px);
+    }
+    40% {
+        transform: translate(-15px, 15px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(100vw, -100vh);
+        opacity: 0;
+    }
+}
