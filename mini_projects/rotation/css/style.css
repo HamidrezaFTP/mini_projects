@@ -1,0 +1,17 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#myDiv {
+    background-color: #ccf;
+    border-radius: 10px;
+    height: 100px;
+    padding-top: 70px;
+    text-align: center;
+    width: 150px;
+}
