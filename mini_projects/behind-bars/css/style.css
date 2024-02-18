@@ -1,0 +1,87 @@
+:root {
+    --background-color: #1a1b30;
+    --main-color: #fbe8d3;
+    --circle-color: #f85f73;
+    --canvas-size: 68vmin;
+    --canvas-max-size: 500px;
+    --bar-width: 1vmin;
+    --animation-duration: 6s;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color);
+}
+
+.canvas-wrapper {
+    padding: 1vmin 0.5vmin;
+    overflow: hidden;
+    border-radius: 50%;
+    background: linear-gradient(transparent, var(--main-color) 40%, var(--main-color) 60%, transparent);
+}
+
+.canvas {
+    width: var(--canvas-size);
+    height: var(--canvas-size);
+    max-width: var(--canvas-max-size);
+    max-height: var(--canvas-max-size);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.bar {
+    width: var(--bar-width);
+    height: 100%;
+    background: linear-gradient(transparent, var(--main-color) 40%, var(--main-color) 60%, transparent);
+}
+
+.bar.is-first, .bar.is-last {
+    background: transparent;
+}
+
+.bar:nth-child(even) {
+    z-index: 1;
+}
+.circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+    background: var(--circle-color);
+    box-shadow: 0 0 20px var(--circle-color);
+}
+
+@keyframes circle-first {
+    0%, 100% {
+        left: 5%;
+    }
+    50% {
+        left: 75%;
+    }
+}
+
+.circle.is-first {
+    animation: circle-first var(--animation-duration) ease-in-out infinite;
+}
+
+@keyframes circle-last {
+    0%, 100% {
+        left: 75%;
+    }
+    50% {
+        left: 5%;
+    }
+}
+
+.circle.is-last {
+    animation: circle-last var(--animation-duration) ease-in-out infinite;
+}
