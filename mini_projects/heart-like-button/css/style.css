@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0e0;
+}
+
+.heart-icon {
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.heart-icon:hover {
+    scale: 1.2;
+}
+
+#heart {
+    width: 50px;
+    height: 50px;
+}
+
+path {
+    transition: 200ms;
+    fill: transparent;
+}
+
+.filled {
+    fill: red;
+}
