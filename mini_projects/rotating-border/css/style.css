@@ -1,0 +1,71 @@
+:root {
+    font-family: sans-serif;
+}
+
+@supports(font-variation-settings: normal) {
+    :root {
+        font-family: sans-serif;
+    }
+}
+
+body {
+    background: #111;
+    color: #eee;
+    padding: 130px 0 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+div {
+    min-width: 600px;
+    height: 100px;
+    position: relative;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+div:hover::after {
+    opacity: 0.5;
+}
+
+div::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #111;
+    inset: 5px;
+    border-radius: 45px;
+    z-index: 1;
+    transition: opacity .3s ease;
+}
+
+#toggle:checked ~ main div::after {
+    opacity: 0.5;
+}
+
+@property --r {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+
+#a {
+    background: conic-gradient(from var(--r), #222 0%, #eee 10%, #222 20%);
+    animation: rotating 3s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        --r: 0deg;
+    }
+    100% {
+        --r: 360deg;
+    }
+}
