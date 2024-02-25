@@ -1,0 +1,182 @@
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    perspective: 500px;
+    perspective-origin: center center;
+    background: #000;
+}
+
+.cont {
+    position: absolute;
+    top: 1em;
+    bottom: 1em;
+    left: 1em;
+    right: 1em;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 15s infinite linear;
+}
+
+.side {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 5%;
+}
+
+.first {
+    transform: translateZ(-100px);
+}
+
+.sixth {
+    transform: translateZ(100px);
+}
+
+.second {
+    transform: translateY(-100px) rotateX(90deg);
+}
+
+.third {
+    transform: translateY(100px) rotateX(90deg);
+}
+
+.fourth {
+    transform: translateX(-100px) rotateY(90deg);
+}
+
+.fifth {
+    transform: translateX(100px) rotateY(90deg);
+}
+
+.side span {
+    position: absolute;
+    top: 37%;
+    left: 37%;
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.second span {
+    background: #F0EA60;
+}
+
+.third span {
+    background: #ee6352;
+}
+
+.fourth span {
+    background: #4F7CAC;
+}
+
+.fifth span {
+    background: #48BF84;
+}
+
+.sixth span {
+    background: #E5A532;
+}
+
+.side span:before, .side span:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.second span {
+    left: 15%;
+}
+
+.second span+ span {
+    left: 60%;
+}
+
+.second span:before, .second span:after {
+    background: #F0EA60;
+    left: 0;
+}
+
+.second span:before {
+    top: -120%;
+}
+
+.second span:after {
+    top: 120%;
+}
+
+.third span {
+    top: 15%;
+    left: 15%;
+}
+
+.third span + span {
+    top: 65%;
+}
+
+.third span:before {
+    background: #ee6352;
+    right: -190%;
+}
+
+.third span + span:after {
+    background: #ee6352;
+    right: -95%;
+    bottom: 100%;
+}
+
+.fourth span {
+    left: 15%;
+}
+
+.fourth span:before {
+    background: #4F7CAC;
+    right: -165%;
+}
+
+.fifth span {
+    left: 15%;
+    top: 15%;
+}
+
+.fifth span+ span {
+    left: 60%;
+}
+
+.fifth span:after {
+    background: #48BF84;
+    left: 0;
+}
+
+.fifth span:after {
+    top: 185%;
+}
+
+.sixth.side span:before, .sixth.side span:after {
+    background: #E5A532;
+    left: 0%;
+}
+
+.sixth.side span:before {
+    top: -120%;
+}
+
+.sixth.side span:after {
+    top: 120%;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
